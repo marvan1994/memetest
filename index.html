@@ -1,12 +1,40 @@
 <!DOCTYPE html>
+
 <html>
 	<head>
 		<title> Quiz </title>
 		<link href="quiz.css" rel="stylesheet">
 
 	</head>
+
 	<body>
-		<div id="quizContainer" class ="container">
+
+			<center>
+	      <div id="first" class="first" style = display>
+
+	        <h1 class = 'firstText'> MEME TEST</h1>
+	        <h2 class = 'firstText'> Узнай, как хорошо ты знаешь тех, с кем готовишься к экзамену!</h2>
+	        <h3 class = 'firstText'>Впиши свое имя</h3>
+	        <input type="text" class = "input-name" placeholder="..." id="nameInput">
+	        <input id="name-btn" class="name-btn" type="submit" onclick="goValue();" value="Поехали">
+					<script>
+							function goValue(){
+									// Selecting the input element and get its value
+
+									var playerName = document.getElementById("nameInput").value;
+									if (playerName.length==0){
+										alert('Имя введи уж, по братски')
+									}else{
+										loadTest()
+									}
+									// Displaying the value
+
+							}
+					</script>
+	      </div>
+	    </center>
+
+		<div id="quizContainer" class ="container" style = display:none>
 				<div id= "title" class="title"> MeMe Test </div>
 				<div id="question" class="question"></div>
 				<label class="option"><input type = "radio" name="option" value="1" /> <span id = "opt1"></span></label>
@@ -15,9 +43,11 @@
 				<label class="option"><input type = "radio" name="option" value="4" /> <span id = "opt4"></span></label>
 				<button id="nexButton" class="next-btn" onclick="loadNextQuestion();">Новый Вопрос</button>
 		</div>
+
 		<div id="result" class="container result" style="display:none;">
 		</div>
 		<script src="question.js"></script>
 		<script src="quiz-script.js"></script>
+		<script src="result-show.js"></script>
 	</body>
 </html>
