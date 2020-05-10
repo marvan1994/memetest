@@ -4,7 +4,7 @@ body{
 }
 .container{
   height: 330px;
-  width: 1000px;
+  width: 650px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -23,15 +23,15 @@ body{
 }
 .question{
   padding: :20px;
-  font-size: 22px;
+  font-size: 20px;
   background: #FFA07A;
   text-transform: uppercase;
-  border-radius: 20px;
-  margin: 10px 0 10px 0;
+  /*border-radius: 20px;*/
+  margin: 20px 0 10px 0;
   color: #0000FF;
 }
 .option{
-  width: 470px;
+  width: 70%;
   display: inline-block;
   padding: :10px 0 10px 15px;
   vertical-align: middle;
@@ -42,7 +42,7 @@ body{
   color: #000000;
 }
 .option:hover{
-  background: #c0514a;
+  background: #C71B86;
   color: #f6f6f6;
 }
 .next-btn{
@@ -57,15 +57,64 @@ body{
   margin: 10px;
 }
 .next-btn:hover{
-  background: #bfb5a2;
-  color: #ffb5a3;
+  background: #C71B86;
+  color: #FFFF;
 }
 .result{
   height:  150px;
   text-align: center;
-  font-size: 65px;
+  font-size: 4vw;
 }
 .option input:checked .option{
   background: #bfb5a2;
   color: #0000;
+}
+.first{
+  height: 330px;
+  width: 650px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: rgba(255, 0, 255, 0.5);
+  padding: 20px;
+  border: 1px solid #c0514a;
+  box-shadow: 0 0 8px 3px #ffff;
+}
+.input-name {
+      background-color: #9476f7;
+      background-image: url('meme-icon.png');
+      background-position: 9px 10px;
+      background-repeat: no-repeat;
+      padding-left: 64px;
+      width:  60%;
+      text-align: center;
+      font-size: 64px;
+}
+.input-name:focus {
+    width: 80%;
+}
+
+.name-btn {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #8842d5;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.name-btn:hover {background-color: #975bd9}
+.name-btn:active {
+  background-color: #b277f2;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.firstText{
+  color: #0a090a;
 }
